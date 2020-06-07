@@ -6,8 +6,9 @@
         <div class="posts-group">
             <div class="post-year">2020</div>
 
-            {% for project in projects %}
+            
             <ul class="posts-list">
+                {% for project in projects %}
                 <li class="post-item">
                     <a href="{{ project.get_absolute_url }}">
                         <span class="post-title">{{ project.title }}</span>
@@ -18,8 +19,9 @@
                         </span>
                     </a>
                 </li>
+                {% endfor %}
             </ul>
-            {% endfor %}
+            
         </div>
 </main>
 {% endblock %}

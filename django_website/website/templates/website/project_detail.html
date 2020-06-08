@@ -1,0 +1,30 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+
+                
+<main class="post" >
+    <article style="text-align: center;">
+          <h1 id="h1">{{ project.title }}</h1>
+          <p>{{ project.description }}</p>
+
+          
+          <a href="{{ project.link }}">  {{ project.link }}  </a>
+          
+         
+    </article>
+
+ </main>
+
+     
+
+
+{% endblock %}
+
+
+
+
+
+<p>{{ project.description }} </p>
+<p>{{ project.link }} </p>
+<p>{{ project.date_pub| date:"F d" }}</p>

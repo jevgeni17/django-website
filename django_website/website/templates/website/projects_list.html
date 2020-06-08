@@ -1,0 +1,28 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+<main class="posts">
+    <h1>Projects</h1>
+        <div class="posts-group">
+            <div class="post-year">2020</div>
+
+            
+            <ul class="posts-list">
+                {% for project in projects %}
+                <li class="post-item">
+                    <a href="{{ project.get_absolute_url }}">
+                        <span class="post-title">{{ project.title }}</span>
+                        <span class="post-day">
+                            
+                            {{ project.date_pub| date:"F d" }}
+                            
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            
+        </div>
+</main>
+{% endblock %}
+

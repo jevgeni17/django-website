@@ -10,7 +10,8 @@ class Project(models.Model):
 
     objects = models.Manager()
 
-    
+    def get_absolute_url(self):
+        return reverse('project_detail_url', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title
